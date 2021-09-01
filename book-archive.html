@@ -9,6 +9,11 @@
     <!-- bootstrap stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #spinner {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,21 +24,20 @@
             <input id="search-input" type="text" class="form-control" placeholder="Search your book">
             <button onclick="loadBooks()" class="btn btn-danger" type="button" id="search-btn">Search</button>
         </div>
-        <div id="results-found"></div>
+        <div id="results-found">
+
+        </div>
     </header>
     <!-- this is main section -->
     <main class="container">
-        <!-- search result show -->
-        <div class="row row-cols-1 row-cols-md-3 g-4 m-2">
-            <div class="col">
-                <div class="card">
-                    <img src="" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
+        <!-- toggle spinner  -->
+        <div id="spinner" class="text-center">
+            <div class="spinner-border text-danger " role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
+        </div>
+        <!-- search result show -->
+        <div id="show-results" class="row row-cols-1 row-cols-md-3 g-4 m-2">
         </div>
     </main>
 
